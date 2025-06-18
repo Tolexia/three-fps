@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu FPS Simple</title>
+  <script type="module" crossorigin src="/three-fps/assets/index-Cgf0B40a.js"></script>
+  <link rel="stylesheet" crossorigin href="/three-fps/assets/index-BJO75wFo.css">
+</head>
+<body>
+    <div id="startButtonContainer">
+        <h1>FPS Simple</h1>
+        <p>Détruisez les cubes !</p>
+        <button id="startButton">Démarrer le Jeu</button>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+    <div id="crosshair"></div>
+    <div id="instructions">
+        ZQSD/WASD: Déplacement<br>
+        Souris: Regarder<br>
+        Clic Gauche: Tirer<br>
+        Échap: Libérer la souris
+    </div>
+    <div id="scoreDisplay">Score: 0</div>
+    <div id="messageBox"></div>
+    <audio id="shootSound" src="https://assets.codepen.io/21542/howler-gun-shot.mp3" preload="auto"></audio>
+    <audio id="hitSound" src="https://assets.codepen.io/21542/howler-hit.mp3" preload="auto"></audio>
+</body>
+</html>
