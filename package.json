@@ -1,17 +1,23 @@
 {
   "name": "three-fps",
+  "homepage": "https://tolexia.github.io/three-fps",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^6.3.5"
   },
   "dependencies": {
-    "three": "^0.177.0"
+    "@vitejs/plugin-react": "^4.5.2",
+    "gh-pages": "^6.3.0",
+    "three": "^0.177.0",
+    "vite-plugin-gh-pages": "^1.0.1"
   }
 }

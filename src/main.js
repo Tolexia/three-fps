@@ -14,6 +14,8 @@ const playerJumpVelocity = 8.0;
 const gravity = 20.0; // Adjusted gravity for a more responsive feel
 let difficultyLevel = 1;
 
+const basePath = !window.location.pathname.includes("localhost") ? "/three-fps" : "";
+
 let controlsEnabled = false;
 let targets = [];
 let score = 0;
@@ -98,7 +100,7 @@ function init() {
     scene.add(ground);
 
     // Skybox
-    const skyTexture = new THREE.TextureLoader().load('./hell_sky.png');
+    const skyTexture = new THREE.TextureLoader().load(`${basePath}/hell_sky.png`);
     scene.background = skyTexture;
     
 
@@ -376,7 +378,7 @@ function spawnTargets(count) {
     zombies = [];
 
     loader.load(
-        './models/zombie_walk_test.glb',
+        `${basePath}/models/zombie_walk_test.glb`,
         function (gltf) {
             
             // Créer les zombies
